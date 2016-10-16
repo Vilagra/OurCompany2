@@ -3,7 +3,6 @@ package com.example.ourcompany;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ActivityOfGame extends AppCompatActivity {
-    boolean pushedOrNot = true;
+    boolean isPushed = true;
     ArrayList<String> valueOfButtons;
     String question;
 
@@ -22,10 +21,10 @@ public class ActivityOfGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_of_game);
         if (savedInstanceState != null) {
-            pushedOrNot = savedInstanceState.getBoolean("pushed");
+            isPushed = savedInstanceState.getBoolean("pushed");
         }
-        if (pushedOrNot) {
-            pushedOrNot = false;
+        if (isPushed) {
+            isPushed = false;
             Map.Entry<String, String> entry = StoreForStatic.dataOfGame.getNextQuestion();
             StoreForStatic.logicOfGame.setCurentCorect(entry.getKey());
             valueOfButtons = new ArrayList<>(StoreForStatic.dataOfGame.getRandomValues(entry.getKey()));
@@ -42,7 +41,7 @@ public class ActivityOfGame extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        outState.putBoolean("pushed", pushedOrNot);
+        outState.putBoolean("pushed", isPushed);
         outState.putStringArrayList("buttons", valueOfButtons);
         outState.putString("question", question);
     }
