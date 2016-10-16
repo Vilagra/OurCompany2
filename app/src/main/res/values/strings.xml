@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Our Company</string>
+    <string name="Result">Ваш результат: </string>
+    <string name="Try">Попробывать</string>
+    <string name="Answer">Вы хотите попрбывать </string>
+    <string-array name="language">
+        <item>English</item>
+        <item>Русский</item>
+    </string-array>
+</resources>
