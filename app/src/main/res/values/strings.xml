@@ -1,10 +1,21 @@
 <resources>
-    <string name="app_name">Our Company</string>
-    <string name="Result">Ваш результат: </string>
-    <string name="Try">Попробывать</string>
-    <string name="Answer">Вы хотите попрбывать </string>
-    <string-array name="language">
-        <item>English</item>
-        <item>Русский</item>
-    </string-array>
+    <string name="app_name">Our company</string>
+    <string name="result">Your result: </string>
+    <string name="try1">Try</string>
+    <string name="offer">Want to try</string>
+    <string name="threeInARow">Shikardos, 3 correct answers in a row </string>
+    <string name="fiveInARow">Bingo! 5 correct answers in a row </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choice_language">Select a language</string>
+    <string name="choose_name">Select player</string>
+    <string name="horosh">Right, kharooosh, keep it going</string>
+    <string name="mistake">Oops, its not right, this is</string>
+    <string name="answerItself">Dont you know? Its YOU</string>
+    <string name="youOn">you are a</string>
+    <string name="member">% member of this company :)</string>
+    <string name="russianVersion"> Russian version?</string>
+    <string name="englishVersion"> English version?</string>
+    <string name="continue2">Next</string>
 </resources>

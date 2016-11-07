@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Наша компашка</string>
+    <string name="result">Ваш результат: </string>
+    <string name="try1">Попробовать</string>
+    <string name="offer">Вы хотите попробовать</string>
+    <string name="threeInARow">Шикардос, 3 верных подряд </string>
+    <string name="fiveInARow">5 верных подряд, да ты походу свой </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="choice_language">Выберите язык</string>
+    <string name="choose_name">Выберте игрока</string>
+    <string name="horosh">Это правильный ответ, харооош, так держать</string>
+    <string name="mistake">Эх, ну как же так, это</string>
+    <string name="answerItself">Ну как же так, это же Tы</string>
+    <string name="youOn">ты на</string>
+    <string name="member">% член этой компании :)</string>
+    <string name="russianVersion"> русскую версию?</string>
+    <string name="englishVersion"> английскую версию?</string>
+    <string name="continue2">Продолжить</string>
+</resources>

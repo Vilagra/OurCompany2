@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/loby_of_game"
     android:layout_width="match_parent"
@@ -8,62 +8,86 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.ourcompany.ActivityOfGame">
-
-    <Button
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/B"
-        android:onClick="giveAnswer"
-        android:layout_above="@+id/D"
-        android:layout_alignLeft="@+id/D"
-        android:layout_alignStart="@+id/D"
-        android:layout_marginBottom="24dp" />
-
-    <Button
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/D"
-        android:onClick="giveAnswer"
-        android:layout_marginRight="39dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="39dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/C"
-        android:onClick="giveAnswer"
-        android:layout_marginLeft="44dp"
-        android:layout_marginStart="44dp"
-        android:layout_alignBaseline="@+id/D"
-        android:layout_alignBottom="@+id/D"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/A"
-        android:onClick="giveAnswer"
-        android:layout_alignBaseline="@+id/B"
-        android:layout_alignBottom="@+id/B"
-        android:layout_alignLeft="@+id/C"
-        android:layout_alignStart="@+id/C" />
-
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.example.ourcompany.activity.ActivityOfGame">
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Question"
         android:id="@+id/question"
-        android:layout_marginBottom="34dp"
-        android:layout_above="@+id/A"
-        android:layout_centerHorizontal="true" />
-</RelativeLayout>
+        android:textColor="#000000"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="bottom"
+    />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <Button
+            android:text="A"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/A"
+            android:onClick="giveAnswer"
+            android:textColor="@color/white"
+            android:paddingLeft="7dp"
+            android:background="@drawable/layout_bg"
+            android:drawableLeft="@drawable/ic_launcher"/>
+
+        <Button
+            android:text="B"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:id="@+id/B"
+            android:onClick="giveAnswer"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/A"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_launcher"
+            android:background="@drawable/layout_bg"
+            android:paddingLeft="7dp"
+            />
+
+        <Button
+            android:text="C"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:id="@+id/C"
+            android:onClick="giveAnswer"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/A"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_launcher"
+            android:background="@drawable/layout_bg"
+            android:paddingLeft="7dp"
+            />
+
+        <Button
+            android:text="D"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/D"
+            android:onClick="giveAnswer"
+            android:layout_below="@+id/C"
+            android:layout_alignLeft="@id/C"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_launcher"
+            android:background="@drawable/layout_bg"
+            android:paddingLeft="7dp"
+            />
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

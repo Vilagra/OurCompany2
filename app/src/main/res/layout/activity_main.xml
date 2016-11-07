@@ -1,40 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.ourcompany.MainActivity">
+    android:orientation="horizontal"
+    android:background="#ffffff">
+    <fragment
+        class="com.example.ourcompany.fragments.LanguageFragment"
+        android:id="@+id/fragment_language"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"/>
 
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="160dp"
-        android:id="@+id/spinner"
-        android:entries="@array/language"/>
-
-
-    <Button
-        android:text="Start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp"
-        android:id="@+id/chooseLanguage"
-        android:onClick="start"/>
-
-    <TextView
-        android:text="Выбирите язык"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/chooseLanguage"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="61dp"
-        android:id="@+id/textView" />
-</RelativeLayout>
+    <FrameLayout
+        android:id= "@+id/fragment_names_container"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,5 +1,11 @@
 package com.example.ourcompany;
 
+import android.content.Context;
+
+import com.example.ourcompany.entity.Person;
+import com.example.ourcompany.entity.Question;
+
+
 /**
  * Created by Vilagra on 12.10.2016.
  */
@@ -7,40 +13,52 @@ package com.example.ourcompany;
 public class LogicOfGame {
     private int correct;
     private int wrong;
-    String curentCorect;
+    Question question;
+    Person player;
+    Context ctx;
+    Location location;
     private int inARow;
 
+    public LogicOfGame(Person player, Context ctx,Location location) {
+        this.player = player;
+        this.ctx = ctx;
+        this.location=location;
+    }
 
+    public Question getQuestion() {
+        return question;
+    }
 
-    public void setCurentCorect(String curentCorect) {
-        this.curentCorect = curentCorect;
+    public void setQuestion(Question question) {
+        this.question = question;
     }
 
     public String checkAnswer(String s){
-        if(s.equals(curentCorect)){
+        if(s.equals(question.getAnswer().getNameByLocation(location))){
             correct++;
             inARow++;
             switch (inARow){
-                case 3: return "Шикардос, 3 подряд верных";
-                case 5: return "5 верных подряд, да ты по ходу свой(я)";
-                default: return "Верно, так держать";
+                case 3: return ctx.getString(R.string.threeInARow);
+                case 5: return ctx.getString(R.string.fiveInARow);
+                default: return ctx.getString(R.string.horosh);
             }
         }
         else{
             wrong++;
             inARow=0;
-            if(curentCorect.equals("Джонни")){
-                return "не верно, ну конечно это же Джонни человек-позитив, человек-зажигалка дарит всегда только положительные эмоции";
+            if (player.getNameByLocation(location).equals(question.getAnswer().getNameByLocation(location))){
+                return ctx.getString(R.string.answerItself)+" "+question.getAnswer().getNameByLocation(location);
             }
-            if(curentCorect.equals("Олежка")&&StoreForStatic.dataOfGame.getLanguge().equals("English")){
-                return "не верно, это же Олежка, так как кекешка:)))";
-            }
-            return "нет,ну вы что, это же "+ curentCorect;
+            return ctx.getString(R.string.mistake)+ " "+question.getAnswer().getNameByLocation(location);
         }
     }
 
+    public Person getPlayer() {
+        return player;
+    }
+
     public String getRusult(){
-        int percent = 100*correct/(wrong+correct);
-        return "Вы на "+ percent+ "% член этой компании:)";
+        int percent = Math.round(100*correct/(wrong+correct));
+        return player.getNameByLocation(location)+", "+ctx.getString(R.string.youOn)+" " +percent+ ctx.getString(R.string.member);
     }
 }

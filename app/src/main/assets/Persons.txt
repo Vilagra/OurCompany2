@@ -1,0 +1,17 @@
+Левый|Levenko|true
+Ленчик|Lena|false
+Олег|Oleg|true
+Яна|Jana|false
+Роман|Roman|true
+Марина|Marina|false
+Белик|Belik|true
+Света|Sveta|false
+Юра|Jura|true
+Фарафоныч|Farafonich|true
+Оля|Olya|false
+Джонни|Djonni|true
+Миша|Misha|true
+Димон|Dimon|true
+Aртур|Artur|true
+Наташа|Natasha|false
+Димон Белгородский|Dimon Belgorod|true
