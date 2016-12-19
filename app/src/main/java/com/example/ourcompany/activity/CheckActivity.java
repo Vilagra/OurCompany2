@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +25,7 @@ public class CheckActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.check)).setText(res);
         String description = myApplication.getLogicOfGame().getQuestion().getDescription();
         ((TextView)findViewById(R.id.description)).setText(description);
+        findViewById(R.id.photo).startAnimation(AnimationUtils.loadAnimation(this,R.anim.mycombo));
         ((ImageView)findViewById(R.id.photo)).setImageResource((int) myApplication.getLogicOfGame().getQuestion().getAnswer().getIdPhoto());
     }
 

@@ -45,7 +45,6 @@ public class ActivityOfGame extends AppCompatActivity {
         outState.putStringArrayList("buttons", (ArrayList<String>) valueOfButtons);
         outState.putString("question", stringQuestion);
     }
-
     public void giveAnswer(View view) {
         Button b = (Button) view;
         String answer = String.valueOf(b.getText());
